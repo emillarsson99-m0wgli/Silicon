@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+.first-page{
+    display: grid;
+
+  
+    grid-template-columns: 5fr 1fr 1fr;
+
+    height: 50px;
+
+}
+
+.bold-button{
+    background-color: #6366F1;
+    color: white;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.bold-button:hover{
+    background-color: #a8aafd;
+}
