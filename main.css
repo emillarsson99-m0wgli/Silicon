@@ -12,7 +12,7 @@ body{
     
 }
 .hero-page{
-    background: radial-gradient(ellipse at bottom, rgba(99, 102, 241, 1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(0, 0, 0, 0.07) 83%);
+    background: radial-gradient(ellipse at bottom, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(0, 0, 0, 0.07) 83%);
     height: 65dvh;
 }
 .header-container {
@@ -21,23 +21,26 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    max-height: 10dvh;
+    max-height: 100dvh;
+
 
     .silicon-logo-img{
         flex: 4;
     }
-    /* .dark-light-button-img{
-       
-        max-width: 80px;
-        max-width: 30px;
-        border: 2px solid red;
-    } */
+
     .Nav-toggle-img{
         flex: 1;
-        
     }
+    .dark-light-button-img{
+        flex: 1;
+    }
+    .dark-mode-txt{
+    display: none;
     
 }
+    
+}
+
 
 .sign-in-button-img{
         background-color: #6366F1;
@@ -51,10 +54,6 @@ body{
         display: none;
     }
 
-.dark-mode-txt{
-        color: #585C7B;
-        display: none;
-    }
 
 .hero{
     display: flex;
@@ -77,9 +76,10 @@ body{
         font-weight: 400;
         color: #585C7B;
         line-height:25px;
-        width: 320px;
+        width: 370px;
         height: 115px;
         font-size: 18px;
+       
     }
 
     .links{
@@ -88,7 +88,7 @@ body{
     }
 }
 
-label{
+/* label{
     width: 50px;
     height: 30px;
     position: relative;
@@ -120,7 +120,7 @@ input:checked + label {
 }
 input:checked + label:after{
     left: 22px;
-}
+} */
 
 .slider-switch{
     display: grid;
@@ -184,10 +184,63 @@ input:checked + .slider:before {
 }
 
 .app-features{
-    height: 100dvh;
-    border: 2px solid red;
+    display: flex;
+    border: 2px solid rgb(0, 0, 0);
     background-color: #F3F6FF;
+    flex-wrap: wrap;
+    margin: 5px;
 }
+
+.feature-top{
+    border: 2px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin: 5px;
+    
+}
+.features{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    
+    
+}
+.feature-images{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 2px solid green;
+    width: 5rem;
+}
+
+.feature-info{
+    border: 2px solid blue;
+}
+.hl-top{
+    font-weight: 800;
+    font-size: 28px;
+}
+.filler-hl{
+    font-size: 18px;
+    color: #585C7B;
+    line-height: 28px;
+}
+.feature-headline{
+    font-size: 20px;
+    line-height: 28px;
+    color: #131022;
+    font-weight:800;
+}
+.filler{
+    color: #585C7B;
+    font-weight:400;
+    line-height:25px;
+    font-size: 1rem;
+}
+
+
 @media (min-width: 600px) {
     .hero{
         
@@ -236,8 +289,7 @@ input:checked + .slider:before {
         color: #585C7B;
         display: flex;
     }
-}
-.header-container {
+    .header-container {
     display: flex;
     margin: 8px;
     flex-direction: row;
@@ -245,17 +297,17 @@ input:checked + .slider:before {
     align-items: center;
     border: 1px solid red;
 
+
     .silicon-logo-img{
         flex: 4;
     }
 
-    .dark-light-button-img{
+    .dark-light-button{
         display: flex;
         justify-content: space-evenly;
         max-width: 80px;
         min-height: 30px;
         margin: 0 auto;
-        color: #131022;
     }
     .Nav-toggle-img{
         max-width: 50px;
@@ -263,6 +315,8 @@ input:checked + .slider:before {
     }
     
 }
+}
+
 
 @media (min-width: 1025px) {
     .hero{
@@ -299,12 +353,6 @@ input:checked + .slider:before {
     }   
 
     .sign-in-button-img{
-        background-color: #6366F1;
-        color: white;
-        height: 50px;
-        border-radius: 10px;
-        border: none;
-        outline: none;
         width: 120x;
         height: 50px;
         display: flex;
@@ -312,8 +360,37 @@ input:checked + .slider:before {
     .Nav-toggle-img{
         display: none;
     }
-    .dark-mode-txt{
-        color: #585C7B;
+    /* .dark-mode-txt{
+        color: #131022;
+        font-weight: 600;
         display: flex;
+    } */
+    .header-container {
+    display: flex;
+    margin: 8px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid red;
+
+    .silicon-logo-img{
+        flex: 4;
     }
+
+    /* .dark-mode-txt{
+        display: flex;
+        justify-content: space-evenly;
+        max-width: 90px;
+        min-height: 30px;
+        margin: 0 auto;
+        color: #585C7B;
+    } */
+    .Nav-toggle-img{
+        max-width: 50px;
+        
+    }
+    
 }
+}
+
+
