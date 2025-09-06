@@ -196,9 +196,9 @@ input:checked + .slider:before {
     flex-direction: column;
     gap: 2rem;
     padding: 1rem;
-}
+    font-family: manrop;
 
-.feature-item{
+    .feature-item{
     display: flex;
     align-items: flex-start;
     gap: 1rem;
@@ -214,7 +214,6 @@ input:checked + .slider:before {
 
 .feature-content{
     max-width: 600px;
-
 }
 
 .feature-headline{
@@ -236,7 +235,32 @@ input:checked + .slider:before {
     color: #585C7B;
     font-size: 18px;
 }
+}
 
+
+
+
+
+.HDIT{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    background-color: #F3F6FF;
+
+    #frame{
+        position: relative;
+        
+}
+    #showcase{
+        position: relative;
+}
+    #backlight{
+        position: relative;
+}
+}
 @media (min-width: 600px) {
     .hero{
         
