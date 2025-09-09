@@ -5,56 +5,145 @@
     font-family: "Manrope", sans-serif;
 }
 
+:root{
+    --color-description-text: #585C7B;
+    --color-title-text: #131022;
+    --color-accent: #6366F1;
+    --color-base: #fff;
+    --color-detail: #F3F6FF;
+}
 body{
     height: 100dvh;
     margin: 0px;
+    padding: 1rem;
+}
     
+h1,h2,h3,h4,h5 {
+    color: var(--color-title-text);
+}
+
+p {
+    color: var(--color-description-text);
+    line-height: 22px;
+}
+button{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 162px;
+    background-color: var(--color-accent);
+    color: var(--color-base);
+    border: none;
+    border-radius: 6px;
+
+    &:hover{
+        background-color: black;
+    }
+    &:active{
+        background-color: rgb(0, 185, 40);
+    }
+}
+.contact{
     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
 }
 .hero-page{
     background: radial-gradient(ellipse at bottom, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(0, 0, 0, 0.07) 83%);
     height: 62dvh;
 }
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 10px;
+.header-container { 
+    width: 100%;
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
 
-    .header{
-    display: flex;
-    gap: 1rem;
-    align-items: flex-start;
-}
-
-.header-icon{
-    width: 50px;
-    height: 50px;
-    flex-shrink: 0;
-    object-fit: contain;
-    margin-top: 1rem;
-}
-
-#silicon-logo{
-    flex-shrink: 0;
-    object-fit: contain;
-    margin-top: 1rem;
-}
-}
-
-
-
-.sign-in-button-img{
-        background-color: #6366F1;
-        color: white;
-        height: 50px;
-        border-radius: 10px;
-        border: none;
-        outline: none;
-        width: 120x;
-        height: 50px;  
-        display: none;
+    .header-area{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       
+             .actions{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.5rem;
+        }
     }
+
+    .nav{
+        width: 40px;
+        height:36px;
+        flex-shrink: 0;
+        object-fit: contain;
+        margin-bottom: .15rem ;
+    }
+
+    .account{
+        display: none;
+
+        @media (width >= 1320px) {
+            display: flex;
+        }
+    }
+}
+.toggle{
+    --_w: 46px;
+    --_h: 24px;
+
+    width: var(--_w);
+    height: var(--_h);
+    flex-shrink: none;
+    position: relative;
+    display: inline-block;
+
+    input[type="checkbox"] {
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+
+    .slider{
+        position: absolute;
+        cursor: pointer;
+        inset: 0;
+        background-color: grey;
+        border-radius: 100vw;
+        box-shadow: 0 0 5px #0000034e;
+
+        transition: 400ms;
+
+        &::before{
+            content:'';
+            position: absolute;
+            height: 80%;
+            aspect-ratio: 1;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px #00000038;
+            transition: 400ms;
+            top: 2px;
+            left: 3px;
+        }
+    }
+
+    input[type="checkbox"]:checked + .slider::before {
+        left: calc(100% - var(--_h));
+        background-color: var(--color-base);
+    }
+        input[type="checkbox"]:checked + .slider{
+        background-color:var(--color-accent);
+    }
+
+}
+
 
 
 .hero{
@@ -66,7 +155,7 @@ body{
 
     .hero-headline{
         font-weight: 900;
-        color: #131022;
+        color: var(--color-title-text);
         width: 350px;
         height: 88px;
         font-size: 34px;
@@ -74,7 +163,6 @@ body{
 
     .hero-paragraph{
         font-weight: 400;
-        color: #585C7B;
         line-height:25px;
         width: 370px;
         height: 115px;
@@ -86,101 +174,6 @@ body{
         justify-content: center;
         line-height: 50px;
     }
-}
-
-/* label{
-    width: 50px;
-    height: 30px;
-    position: relative;
-    display: block;
-    background: #9397AD;
-    border-radius: 100px;
-    cursor: pointer;
-    transition: .3s;
-    border: 2px solid brown;
-}
-label:after{
-    content: "";
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    top: 2.5px;
-    left: 2.5px;
-    background: #ebebeb;
-    border-radius: 180px;
-    transition: .3s;
-}
-input{
-    width: 0;
-    height: 0;
-    visibility: hidden;
-}
-input:checked + label {
-    background: #a8aafd;
-}
-input:checked + label:after{
-    left: 22px;
-} */
-
-.slider-switch{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    transform: translate(-50%, -50%);
-    text-align: center;
-
-    .slider-switch{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-.toggle{
-    margin-bottom: 40px;
-    font-family: sans-serif;
-    font-size: 1rem;
-}
-
-.switch{
-    position: relative;
-    display: inline-block;
-    width: 55px;
-    height: 30px;
-    margin: 0 10px;
-}
-
-.slider{
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-    border-radius: 34px;
-}
-
-.switch input {display:none}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 25px;
-    width: 25px;
-    left: 2.5px;
-    bottom: 2.5px;
-    background-color: white;
-    transition: 0.4s;
-    border-radius: 34px;
-}
-
-input:checked + .slider {
-    background-color: #6366F1;
-}
-
-input:checked + .slider:before {
-    transform: translate(25px);
-}
 }
 
 
@@ -198,48 +191,40 @@ input:checked + .slider:before {
     padding: 1rem;
 
     .feature-item{
-    display: flex;
-    align-items: flex-start;
-    gap: 2rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 2rem;
 }
 
-.feature-icon{
-    width: 55px;
-    height: 55px;
-    flex-shrink: 0;
-    object-fit: contain;
-    margin-top: 1rem;
+    .feature-icon{
+        width: 55px;
+        height: 55px;
+        flex-shrink: 0;
+        object-fit: contain;
+        margin-top: 1rem;
 }
 
-.feature-content{
-    max-width: 600px;
+    .feature-content{
+        max-width: 600px;
+    }
+
+    .feature-headline{
+        font-size: 20px;
+    }
+
+    .feature-description{
+        margin: 0;
+        width: 280px;
+    }
+
+    #headline-title{
+        font-size: 28px;
+    }
+
+    #headline-description{
+        font-size: 18px;
+    }
 }
-
-.feature-headline{
-    font-size: 20px;
-    color: #131022;
-}
-
-.feature-description{
-    color: #585C7B;
-    margin: 0;
-    width: 280px;
-}
-
-#headline-title{
-    color:#131022;
-    font-size: 28px;
-}
-
-#headline-description{
-    color: #585C7B;
-    font-size: 18px;
-}
-}
-
-
-
-
 
 .HDIT{
     display: flex;
@@ -270,8 +255,140 @@ input:checked + .slider:before {
     #HDIT-description{
         font-size: 16px;
         font-weight: 400;
-        color: #585C7B;
     }
+}
+
+.FAQ-top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.FAQ{
+    gap: 2rem;
+    padding: .5rem;
+
+
+    .FAQ-list{
+        position: relative;
+        width: 100%;
+
+    }
+
+    .FAQ-box{
+        position: relative;
+        cursor: pointer;
+        border: 1px solid gainsboro;
+        padding: 8px;
+        border-radius: 10px 10px 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        &.active .FAQ-arrow-circle{
+            background-color: var(--color-accent);
+
+        }
+        &.active .FAQ-arrow{
+            transform: rotate(225deg);
+            width: 8px;
+            height: 8px;
+            border:2px solid var(--color-detail);
+            border-top: none;
+            border-left: none;
+        }
+        &.active + .FAQ-descriptions {
+            display: block;
+        }
+
+        .FAQ-selected{
+            font-size:1rem;
+            width:300px;
+            font-weight: 600;
+        }
+        .FAQ-arrow-circle{
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            background-color: var(--color-detail);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+
+        }
+        .FAQ-arrow{
+            width: 8px;
+            height: 8px;
+            border:2px solid var(--color-description-text);
+            border-top: none;
+            border-left: none;
+            transform: rotate(45deg)
+            
+        }
+    }
+   
+    .FAQ-descriptions{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        border: 1px solid gainsboro;
+        border-top: None;
+        display: none;
+    }
+
+    .FAQ-descriptions.active{
+    display: block;
+    position: relative;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    }
+    
+    .FAQ-description{
+        font-size: 14px;
+        padding: 1rem;
+        margin: 10px;
+        cursor: pointer;
+        transition: back;
+    }
+    .FAQ-description p {
+        margin-top: 1.5em;
+    }
+}
+
+.newsletter-box{
+
+    height: 251px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+
+    background-color: var(--color-detail);
+
+    #newsletter-icon{
+        width: 78px;
+        height: 93px;
+        flex-shrink: 0;
+        object-fit: contain;
+
+    }
+    #newsletter-headline{
+        width: 230px;
+    }
+}
+footer{
+
+    display: flex;
+    justify-content: center;
 }
 @media (min-width: 600px) {
     .hero{
@@ -283,7 +400,6 @@ input:checked + .slider:before {
 
         .hero-headline{
             font-weight: 900;
-            color: #131022;
             width: 300px;
             height: 88px;
             font-size: 34px;
@@ -291,7 +407,6 @@ input:checked + .slider:before {
 
         .hero-paragraph{
             font-weight: 200;
-            color: #585C7B;
             line-height:25px;
             width: 320px;
             height: 115px;
