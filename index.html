@@ -8,7 +8,7 @@
     <title>Silicon | Home</title>
 </head>
 <body>
-    <section class="hero-page">
+    <section id="hero-page">
         <header class="header-container">
            <div class="header-area">
                 <div class="header-logotype">
@@ -24,26 +24,50 @@
                     <div class="account">
                         <a href="#" class="btn">
                             <img src="icons/user-icon.svg" alt="user icon">
-                            <span>Sign in / up</span>
+                            <span class="sign-in-btn">Sign in / up</span>
                         </a>
                     </div>
                     <div class="nav">
-                        <img src="icons/navtgl.svg" alt="Navigation toggle">
+                        <img src="Icons/navtgl.svg" alt="">
                     </div>
                 </div>
             </div>
         </header>
+
+
         <main class="hero">
             <h1 class="hero-headline">Manage All Your Money in One App</h1>
             <p class="hero-paragraph">We offer you a new generation of the mobile banking. Save, spend & manage money in your pocket.</p> 
-            <div class="links">
-                <a class="link1" href="https://play.google.com/"><img src="icons/googlePlaystoreDownloadLink.svg" class="Googleplay-tab" alt=""></a>
-                <a class="link2" href="https://www.apple.com/app-store/"><img src="icons/appstoreDownloadLink.svg" class="appstore-tab" alt=""></a>
+            
+            <div class="app-download-btns">
+                <a href="#" class="btn-download">
+
+                    <article class="download-app">
+                        <img src="icons/Apple-logo-light.svg" alt="Download at Apple Appstore" class="download-app-icon">
+                        <div class="download-content">
+                            <div class="download-text-block">
+                                <span class="download-app-text">Download on the</span>
+                                <span class="download-app-bottom-text">App Store</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="download-app">
+                        <img src="icons/googlePlay-logo.svg" alt="Download at Apple Appstore" class="download-app-icon">
+                        <div class="download-content">
+                            <div class="download-text-block">
+                                <span class="download-app-text">GET IT ON</span>
+                                <span class="download-app-bottom-text">Google Play</span>
+                            </div>
+                        </div>
+                    </article>
+                </a>
             </div>
         </main>
     </section>
-     
-    <section class="features">
+    
+
+    <section id="features">
         <article id="feature-headline">
             <div class="feature-top">
                 <h1 id="headline-title">App features</h1>
@@ -51,42 +75,54 @@
             </div>    
         </article>
         <article class="feature-item">
-            <img src="icons/easypaymentimg.svg" alt="Easy Payment Icon" class="feature-icon">
+            <div class="feature-icon-box">
+                <img src="icons/payments-icon.svg" alt="Easy Payment Icon" class="feature-icon">
+            </div>
             <div class="feature-content">
                 <h2 class="feature-headline">Easy Payments</h2>
                 <p class="feature-description">Id mollis consectetur congue egestas egestas suspendisse blandit justo.</p>
             </div>
         </article>
         <article class="feature-item">
-            <img src="icons/datasecurityimg.svg" alt="Data Security Icon" class="feature-icon">
+            <div class="feature-icon-box">
+                <img src="icons/security-icon.svg" alt="Data Security Icon" class="feature-icon">
+            </div>
             <div class="feature-content">
                 <h2 class="feature-headline">Data Security</h2>
                 <p class="feature-description">Augue pulvinar justo, fermentum fames aliquam accumsan vestibulum non.</p>
             </div>
         </article>
         <article class="feature-item">
-            <img src="icons/coststatisticsimg.svg" alt="Cost Statistics Icon" class="feature-icon">
+            <div class="feature-icon-box">
+                <img src="icons/statistics-icon.svg" alt="Cost Statistics Icon" class="feature-icon">
+            </div>
             <div class="feature-content">
                 <h2 class="feature-headline">Cost Statistics</h2>
                 <p class="feature-description">Mattis urna ultricies non amet, purus in auctor non. Odio vulputate ac nibh.</p>
             </div>
         </article>
         <article class="feature-item">
-            <img src="icons/supportimg.svg" alt="Support Icon" class="feature-icon">
+            <div class="feature-icon-box">
+                <img src="icons/support-icon.svg" alt="Support Icon" class="feature-icon">
+            </div>
             <div class="feature-content">
                 <h2 class="feature-headline">Support 24/7</h2>
                 <p class="feature-description">A elementum, imperdiet enim, pretium etiam facilisi in aenean quam mauris.</p>
             </div>
         </article>
         <article class="feature-item">
-            <img src="icons/cashbackimg.svg" alt="Cashback Icon" class="feature-icon">
+            <div class="feature-icon-box">
+                <img src="icons/cashback-icon.svg" alt="Cashback Icon" class="feature-icon">
+            </div>
             <div class="feature-content">
                 <h2 class="feature-headline">Regular Cashback</h2>
                 <p class="feature-description">Sit facilisis dolor arcu, fermentum vestibulum arcu elementum imperdiet eleifend.</p>
             </div>
         </article>
         <article class="feature-item">
-            <img src="icons/topstandardsimg.svg" alt="Top Standards Icon" class="feature-icon">
+            <div class="feature-icon-box">
+                <img src="icons/happy-icon.svg" alt="Top Standards Icon" class="feature-icon">
+            </div>
             <div class="feature-content">
                 <h2 class="feature-headline">Top Standards</h2>
                 <p class="feature-description">Faucibus cursus maecenas lorem cursus nibh. Sociis sit risus id. Sit facilisis dolor arcu.</p>
@@ -94,7 +130,9 @@
         </article>
     </section>
 
-    <section class="how-does-it-work">
+
+
+    <section id="how-does-it-work">
         <article class="HDIT">
             <h1> How Does It Work?</h1>
             <div class="image-stack">
@@ -109,7 +147,9 @@
         </article>
     </section>
 
-    <section class="Frequently-asked-questions">
+
+
+    <section id="frequently-asked-questions">
         <Article class="FAQ">
             <div class="FAQ-top">
                 <h1>Any questions? Check out the FAQs</h1>
@@ -117,7 +157,8 @@
             </div>
 
             <div class="FAQ-list">
-                <div class="FAQ-box" data-value="1">
+
+                <div class="FAQ-box" id="First-FAQ"  data-value="1">
                     <span class="FAQ-selected">Is any of my personal information stored in the App?</span>
                     <div class="FAQ-arrow-circle">
                         <div class="FAQ-arrow"></div>
@@ -130,6 +171,7 @@
                         <P>Ornare senectus fusce dignissim ut. Integer consequat in eu tortor, faucibus et lacinia posuere. Turpis sit viverra lorem suspendisse lacus aliquam auctor vulputate. Quis egestas aliquam nunc purus lacus, elit leo elit facilisi. Dignissim amet adipiscing massa integer.</P>
                     </div>
                 </div>
+
                 <div class="FAQ-box" data-value="2">
                     <span class="FAQ-selected">What formats can I download my transaction history in?</span>
                     <div class="FAQ-arrow-circle">
@@ -139,6 +181,7 @@
                 <div class="FAQ-descriptions" data-value="2">
                     <div class="FAQ-description"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, molestias!</p></div>
                 </div>
+
                 <div class="FAQ-box" data-value="3">
                     <span class="FAQ-selected">Can I schedule future transfers?</span>
                     <div class="FAQ-arrow-circle">
@@ -148,6 +191,7 @@
                 <div class="FAQ-descriptions" data-value="3">
                     <div class="FAQ-description"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, vitae atque. Veritatis nobis omnis voluptatem inventore autem distinctio repellat aperiam! Dolorum, amet vel! Fuga consequuntur perferendis qui veniam asperiores at.</p></div>
                 </div>
+
                 <div class="FAQ-box" data-value="4">
                     <span class="FAQ-selected">When can I use Banking App services?</span>
                     <div class="FAQ-arrow-circle">
@@ -157,6 +201,7 @@
                 <div class="FAQ-descriptions" data-value="4">
                     <div class="FAQ-description"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae, natus!</p></div>
                 </div>
+
                 <div class="FAQ-box" data-value="5">
                     <span class="FAQ-selected">Can I create my own password that is easy for me to remember?</span>
                     <div class="FAQ-arrow-circle">
@@ -166,7 +211,8 @@
                 <div class="FAQ-descriptions" data-value="5">
                     <div class="FAQ-description"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae eos iusto nulla qui iste tempora odit sunt eveniet temporibus fuga nemo, eligendi doloremque eaque commodi deserunt labore esse omnis aut?</p></div>
                 </div>
-                <div class="FAQ-box" data-value="6">
+
+                <div class="FAQ-box" id="last-FAQ" data-value="6">
                     <span class="FAQ-selected">What happens if I forget or lose my password?</span>
                     <div class="FAQ-arrow-circle">
                         <div class="FAQ-arrow"></div>
@@ -175,28 +221,40 @@
                 <div class="FAQ-descriptions" data-value="6">
                     <div class="FAQ-description"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, sed.</p></div>
                 </div>
+
             </div>
         </Article>
     </section>
 
+
+
     <div class="contact">
-        <button>Contact us now</button>
+        <button class="contact-btn">Contact us now</button>
     </div>
+
+
 
     <section class="newsletter">
         <div class="newsletter-box">
-            <img src="icons/newslettericon.svg" alt="Top Standards Icon" id="newsletter-icon">
-            <div class="feature-content">
-                <h2 id="newsletter-headline">Subscribe to our newsletter</h2>
+            <div class="newsletter-header">
+                <img src="icons/newslettericon.svg" alt="newsletter icon" class="newsletter-icon">
+                <h2 class="newsletter-title">Subscribe to our newsletter</h2>
             </div>
             <form action="/subscribe" method="post" class="email">
-                <label for="email"></label>
-                <input type="eamil" name="email" id="email" placeholder="Your email">
+                <div class="email-container">
+                    <img src="Icons/mail-icon.svg" alt="" class="email-icon" aria-hidden="true">
+                    <label for="email" class="email-hidden"></label>
+                    <input type="email" name="email" class="email-box" placeholder="Your email">
+                </div>
+                <button class="newsletter-button">Subscribe</button>
             </form>
         </div>
     </section>
+
+
+
     <footer class="footer">
-        <p>© 2025 Silicon. All rights reserved. </p>
+        <p id="footer-text">© 2025 Silicon. All rights reserved. </p>
     </footer>
     <script src="Silicon.js"></script>
 </body>
