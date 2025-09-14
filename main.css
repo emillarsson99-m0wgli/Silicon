@@ -16,6 +16,7 @@
     --color-body-text: #565973;
     --color-navigation: #33354D;
     --color-heading-dark: #0B0F19;
+    --box-shadow: #37393d24;
 
     --color-primary: #6366F1;
     --color-description: #585C7B;
@@ -31,11 +32,15 @@
 
     --feature-icon-box: #F3F6FF;
 
+    --HDIT-bg: #f3f6ff;
+
     --faq-arrow-bg: #F3F6FF;
     --faq-arrow: #33354D;
     --faq-arrow-open-bg: #6366F1;
     --faq-arrow-open: #FFFFFF;
     --faq-box-border: #F3F6FF;
+    --faq-text: #585C7B;
+    
 
     --contact-text: #ffffff;
     --newsletter-box: #F3F6FF;
@@ -69,6 +74,7 @@ body{
     --color-body-text: #565973;
     --color-navigation: #33354D;
     --color-heading-dark: #FFFFFF;
+    --box-shadow: #00000000;
 
     --color-primary: #6366F1;
     --color-description: #585C7B;
@@ -86,13 +92,15 @@ body{
 
     --HDIT-bg: #1c202aaa;
 
-    --faq-box: #131022;
+    --faq-box-mobile: #131022;
+    --faq-box: #1c202aaa;
     --faq-description: #131022;
     --faq-arrow-bg: #F3F6FF;
     --faq-arrow: #33354D;
     --faq-arrow-open-bg: #6366F1;
     --faq-arrow-open: #FFFFFF;
     --faq-box-border: #ffffff30;
+    --faq-text: #ffffffbc;
 
     --newsletter-box: #1c202aaa;
     --email-box: #ffffff;
@@ -126,25 +134,6 @@ button{
     }
     &:active{
         background-color: rgb(0, 185, 40);
-    }
-}
-
-
-
-.contact{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 1320px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 1rem;
-
-    .contact-btn{
-    color: var(--contact-text);
     }
 }
 
@@ -272,7 +261,7 @@ button{
         color: var(--color-heading-dark);
         width: 100%;
         max-width: 500px;
-        font-size: 16px;
+        font-size: 34px;
     }
 
     .hero-paragraph{
@@ -493,7 +482,7 @@ button{
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: 1rem;
+
     }
 
     .image-stack-container {
@@ -504,28 +493,42 @@ button{
 
     .image-stack {
         position: relative;
-        width: 100%;
-        max-width: 270px;
-        height: auto;
-        aspect-ratio: 270/545;
-    
+        width: 270px;
+        height: 545px;
+        flex-shrink: 0;
     }
 
-    .stacked-image {
+    .mobile-stack {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: auto;
+        height: 100%;
         object-fit: cover;
     }
 
-    .HDIT-tablet-image {
+    .showcase-side {
         display: none;
     }
 
+    @media (width >= 768px) {
+        .showcase-side {
+            display: block;
+            width: 203px;
+            height: 410px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+    }
 
-        
+    @media (width >= 768px) {
+        .image-stack {
+            position: relative;
+            width: 203px;
+            height: 410px;
+            flex-shrink: 0;
+        }
+    }
     .HDIT-bottom-container {
         display: flex;
         justify-content: center;
@@ -564,6 +567,14 @@ button{
     flex-direction: column;
     text-align: center;
     margin-bottom: 40px;
+
+    .FAQ-headline {
+        color: var(--color-heading-dark);
+    }
+
+    .FAQ-top-description{
+        color: var(--color-description);
+    }
 }
 
 .FAQ{
@@ -592,7 +603,7 @@ button{
 
 
     .FAQ-box{
-        background-color: var(--faq-box);
+        background-color: var(--faq-box-mobile);
         position: relative;
         cursor: pointer;
         border: 1px solid var(--faq-box-border);
@@ -671,9 +682,10 @@ button{
         width: 100%;
         border-top: none;
         border: 1px solid var(--faq-box-border);
-        background-color: var(--faq-description);
-        border: 0 0 10px 10px;
+        background-color: var(--faq-box);
         display: none;
+        color: var(--faq-text);
+        z-index: 1;
     }
 
     .FAQ-descriptions.active{
@@ -697,8 +709,51 @@ button{
         margin: 0;
         padding: 1rem;
     }
+
+    .FAQ-list {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+
+    @media (width >= 768px) {
+        .FAQ-list {
+            gap: 1rem;
+        }
+        .FAQ-box {
+            box-shadow: 0 8px 10px 1px var(--box-shadow);
+            border-radius: 8px;
+            background-color: var(--faq-box);
+            border: none;
+        }
+        #last-FAQ {
+            border-radius: 8px;
+        }
+        #first-FAQ {
+            border-radius: 8px;
+        }
+    }
 }
 
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 3rem;
+
+    .contact-btn{
+    color: var(--contact-text);
+    }
+}
 
 .newsletter{
     display: flex;
