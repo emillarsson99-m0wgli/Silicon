@@ -41,7 +41,7 @@
     --faq-box-border: #F3F6FF;
     --faq-text: #585C7B;
     
-
+    --contact-box-border: #E2E5F1;
     --contact-text: #ffffff;
     --contact-call-us: #6366F1;
     --contact-message-us: #22C55E;
@@ -771,7 +771,6 @@ button{
 }
 
 .contact {
-    padding-top: 2rem; 
     max-width: 1320px;
     width: 100%;
 
@@ -785,7 +784,7 @@ button{
         height: 235px;
     }
     .call-us {
-        border: 1px solid grey;
+        border: 1px solid var(--contact-box-border);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -796,30 +795,54 @@ button{
         border-radius: 8px;
         padding-left: 2rem;
     }
-    .chat-with-us {
-        border: 1px solid grey;
+    .call-us a {
+        font-weight: 600;
+        text-decoration: none;
+        color: var(--contact-call-us);
+    }
+    .call-us p {
+        color: var(--color-description);
+    }
+    .call-us-btn {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        max-width: 345px;
-        width: 100%;
-        max-height: 170px;
-        height: 100%;
-        border-radius: 8px;
-        padding-left: 2rem;
-        
+        align-items: center;
+        gap: 5px;
     }
 
+    .chat-with-us {
+        border: 1px solid var(--contact-box-border);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 345px;
+        width: 100%;
+        max-height: 170px;
+        height: 100%;
+        border-radius: 8px;
+        padding-left: 2rem;   
+    }
     .chat-with-us a {
+        font-weight: 600;
+        text-decoration: none;
         color:var(--contact-message-us);
     }
     .chat-with-us p {
         color: var(--color-description);
     }
+    .chat-with-us-btn{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
     .contact-icon {
         width: 28px;
         height: 28px;
         flex-shrink: 0;
+        
+    }
+    .contact-arrows {
+        height: 20px;
+        width: 20px;
     }
 
 
