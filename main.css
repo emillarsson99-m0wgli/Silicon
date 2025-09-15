@@ -43,6 +43,8 @@
     
 
     --contact-text: #ffffff;
+    --contact-call-us: #6366F1;
+    --contact-message-us: #22C55E;
     --newsletter-box: #F3F6FF;
     --email-box:#ffffff;
     --email-subscribe: #ffffff;
@@ -768,28 +770,85 @@ button{
     }
 }
 
-
-.contact{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+.contact {
+    padding-top: 2rem; 
     max-width: 1320px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 3rem;
+    width: 100%;
 
-    .contact-btn{
-    color: var(--contact-text);
+
+    .contact-tablet {
+        display: none;
+        justify-content: space-around;
+        align-items: center;
+        max-width: 1320px;
+        width: 100%;
+        height: 235px;
+    }
+    .call-us {
+        border: 1px solid grey;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 345px;
+        width: 100%;
+        max-height: 170px;
+        height: 100%;
+        border-radius: 8px;
+        padding-left: 2rem;
+    }
+    .chat-with-us {
+        border: 1px solid grey;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 345px;
+        width: 100%;
+        max-height: 170px;
+        height: 100%;
+        border-radius: 8px;
+        padding-left: 2rem;
+        
+    }
+
+    .chat-with-us a {
+        color:var(--contact-message-us);
+    }
+    .chat-with-us p {
+        color: var(--color-description);
+    }
+    .contact-icon {
+        width: 28px;
+        height: 28px;
+        flex-shrink: 0;
+    }
+
+
+    .contact-mobile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 1320px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 3rem;
+
+        .contact-btn{
+            color: var(--contact-text);
+        }
     }
     @media (width >= 768px) {
         .contact-btn {
             display: none;
         }
+        .contact-tablet {
+            display: flex;
+        }
     }
 }
+
 
 
 .newsletter{
