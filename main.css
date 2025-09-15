@@ -16,7 +16,7 @@
     --color-body-text: #565973;
     --color-navigation: #33354D;
     --color-heading-dark: #0B0F19;
-    --box-shadow: #37393d24;
+    --box-shadow: #37393d0e;
 
     --color-primary: #6366F1;
     --color-description: #585C7B;
@@ -682,7 +682,7 @@ button{
         width: 100%;
         border-top: none;
         border: 1px solid var(--faq-box-border);
-        background-color: var(--faq-box);
+        background-color: var(--faq-box-mobile);
         display: none;
         color: var(--faq-text);
         z-index: 1;
@@ -694,9 +694,11 @@ button{
     top: 0%;
     left: 0;
     width: 100%;
+    box-shadow: inherit;
     }
     
     .FAQ-description{
+
         margin: 0;
         font-size: 14px;
         padding: 0;
@@ -729,14 +731,43 @@ button{
             background-color: var(--faq-box);
             border: none;
         }
+        .FAQ-descriptions {
+            position: absolute;
+            top: calc(100% - 1rem);
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 2;
+            background-color: var(--faq-box);
+        }
+
+        #First-FAQ {
+            border-radius: 8px;
+        }
+        #First-FAQ.active {
+            border-radius: 10px 10px 0 0;
+        }
         #last-FAQ {
             border-radius: 8px;
         }
-        #first-FAQ {
-            border-radius: 8px;
+        .FAQ-box.active {
+            border: 1px solid var(--faq-box-border);
+            border-bottom: none;
+            border-radius: 10px 10px 0 0;
+            margin-bottom: -1.1rem;
+            box-shadow: none;
+        }
+        .FAQ-descriptions.active {
+            position: static;
+            border-top: none;
+            border-radius: 0 0 10px 10px;
+        }
+        .FAQ-selected {
+            min-width: 500px;
         }
     }
 }
+
 
 .contact{
     display: flex;
@@ -753,7 +784,13 @@ button{
     .contact-btn{
     color: var(--contact-text);
     }
+    @media (width >= 768px) {
+        .contact-btn {
+            display: none;
+        }
+    }
 }
+
 
 .newsletter{
     display: flex;
