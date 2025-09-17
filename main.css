@@ -147,21 +147,31 @@ button{
     margin-right: auto;
     padding-left: 1rem;
     padding-right: 1rem;
-    padding-top: 1rem;
     
     .header-area{
         display: flex;
         justify-content: space-between;
         align-items: center;
        
-             .actions{
+    }
+     .actions{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.5rem;
+
+        .darkmode {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            gap: 1.5rem;
         }
+
     }
 
+    .darkmode-tablet {
+        display: none;
+                
+    }
     .nav{
         width: 40px;
         height:36px;
@@ -176,6 +186,19 @@ button{
         @media (width >= 1320px) {
             display: flex;
         }
+    }
+    @media (width >= 768px) {
+
+        .darkmode {
+            gap: 1rem;
+            margin-right: 2.5rem;
+        }
+        .darkmode-tablet {
+            display: flex;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
     }
 }
 
