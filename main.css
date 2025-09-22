@@ -472,12 +472,9 @@ button{
             align-items: flex-start;
         }
 
-        .hero-headline-container {
-            border: 2px solid lime;
-        }
+
 
         .hero-headline {
-            border: 2px solid green;
             text-align: left;
             max-width: 600px;
             width: 100%;
@@ -485,7 +482,6 @@ button{
         }
 
         .hero-phone-container {
-            border: 2px solid yellow;
             display: flex;
             flex-direction: row;
             width: 100%;
@@ -497,14 +493,12 @@ button{
         }
 
         .hero-phones {
-            border: 2px solid blue;
             flex: 1;
             min-width: 650px;
             padding-left: 30px;
         }
 
         .hero-paragraph {
-            border: 2px solid magenta;
             min-width: 526px;
         }
 
@@ -525,8 +519,7 @@ button{
             width: 180px;
             height: 52px;                      
         }
-
-
+    }
 }
 
 
@@ -588,6 +581,28 @@ button{
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+    max-width: 750px;
+    width: 100%;
+
+    #headline-title {
+        font-size: 4rem;
+    }
+
+    @media (width >= 1200px) {
+
+        #headline-description {
+        border: 2px solid magenta;
+        text-align: left;
+    
+        }
+
+        #headline-title {
+            border: 2px solid aqua;
+            text-align: left;
+            font-weight: 800;
+            width: 100%;
+        }
+    }
 }
 
 #features{
@@ -602,18 +617,28 @@ button{
     padding-top: 1rem;
     padding-bottom: 5rem;
 
-    @media (width >=768px) {
+    .feature-container {
+        display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        margin-top: 4rem;
     }
 
+    .feature-boxes {
+        border: 2px solid blue;
+        display: flex;
+        flex-direction: column;
+        max-width: 746px;
+        width: 100%;
+    }
+    .feature-phone-icon {
+        display: none;
+    }
     .feature-item{
         display: flex;
         align-items: flex-start;
         gap: 1rem;
-        
     }
+
     .feature-icon-box{
         display: flex;
         justify-content: center;
@@ -624,6 +649,7 @@ button{
         background-color: var(--feature-icon-box);
         margin-top: 1rem;
     }
+
     .feature-icon{
         display: flex;
         justify-content: center;
@@ -656,6 +682,24 @@ button{
     #headline-description{
         font-size: 18px;
         color: var(--color-description);
+    }
+
+    @media (width >=768px) {
+        .feature-boxes {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    } 
+    
+    @media (width >= 1200px) {
+        .feature-container {
+            border: 2px solid red;
+            gap: 12rem;
+        }
+        .feature-phone-icon {
+            display: flex;
+        }
     }
 }
 
