@@ -1269,6 +1269,14 @@ button{
     }
 }
 
+@media (width >= 1200px) {
+    #frequently-asked-questions {
+        display: flex;
+    } 
+
+    
+}
+
 .contact {
     max-width: 1320px;
     width: 100%;
