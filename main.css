@@ -18,6 +18,8 @@
     --color-heading-dark: #0B0F19;
     --box-shadow: #37393d0e;
 
+    --button-text: #FFFFFF;
+
     --color-primary: #6366F1;
     --color-description: #585C7B;
 
@@ -901,14 +903,19 @@ button{
     margin-right: auto;
     padding-left: 1rem;
     padding-right: 1rem;
-    padding-top: 1rem;
+    padding-top: 5rem;
     padding-bottom: 5rem;
     }
 
     .testimonials-container {
         display: flex;
-        gap: 2rem;
+        gap: 4rem;
+    }
 
+    .testimonials-container h2 {
+        font-size: 40px;
+        font-weight: 800;
+        max-width: 305px;
     }
     .testimonials-boxes {
         display: flex;
@@ -923,6 +930,10 @@ button{
         height: 330px;
         padding: 24px;
         padding-top: 48px;
+        box-shadow: 0 8px 10px 1px var(--box-shadow);
+    }
+    .testimonials-box p {
+        color: var(--color-body-text);
     }
 
     .testimonials-emoji {
@@ -932,7 +943,24 @@ button{
     
     .testimonials-person {
         display: flex;
-        
+    }
+
+    .testimonials-person-text h5 {
+        margin: 0;
+        font-size: 16px;
+    }
+
+    .testimonials-person-text p {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-size: 14px;
+        color: var(--color-muted-text);
+    }
+    .testimonials-quote-icon {
+        width: 44px;
+        height: auto;
+        display: flex;
+        z-index: 99;
     }
 
 .FAQ-top{
