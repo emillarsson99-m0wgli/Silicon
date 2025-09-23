@@ -40,6 +40,7 @@
     --app-feature-description: #585C7B;
     
     --testimonials-bg: #f3f6ff;
+    --testimonials-box: #FFFFFF;
 
     --faq-arrow-bg: #F3F6FF;
     --faq-arrow: #33354D;
@@ -106,6 +107,7 @@ body{
     --app-feature-title: #FFFFFF;
 
     --testimonials-bg: #1c202aaa;
+    --testimonials-box: rgba(255, 255, 255, 0.04);
 
     --faq-box-mobile: #131022;
     --faq-box: #1c202aaa;
@@ -918,11 +920,12 @@ button{
         max-width: 305px;
     }
     .testimonials-boxes {
+
         display: flex;
         gap: 2rem;
     }
     .testimonials-box {
-        background-color: #FFFFFF;
+        background-color: var(--testimonials-box);
         display: flex;
         flex-direction: column;
         border-radius: 8px;
@@ -943,8 +946,12 @@ button{
     
     .testimonials-person {
         display: flex;
+        gap: 0.5rem;
     }
 
+    .testimonials-person img {
+        margin-bottom: 1rem;
+    }
     .testimonials-person-text h5 {
         margin: 0;
         font-size: 16px;
