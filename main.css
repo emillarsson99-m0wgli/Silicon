@@ -212,9 +212,10 @@ button{
         width: 162px;
         max-width: 100%;
         background-color: var(--color-primary);
-        color: var(--color-bg);
+        color: var(--button-text);
         border: none;
         border-radius: 6px;
+        text-decoration: none;
 
         &:hover{
             background-color: black;
@@ -223,9 +224,7 @@ button{
             background-color: rgb(0, 185, 40);
         }
     }
-    .sign-in-btn {
-        text-decoration: none;
-    }
+
     @media (width >= 768px) {
 
         .darkmode {
