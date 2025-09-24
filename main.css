@@ -1031,7 +1031,6 @@ button{
     }
 }
 
-    }
 
     @media (width >= 1200px) {
         .image-stack-container {
@@ -1058,7 +1057,7 @@ button{
             height: auto;
         }
     }
-}
+
 
 #appFeatures {
     display: none;
@@ -1675,11 +1674,3 @@ button{
 }
 
 
-
-        /* grid-column: 1;
-        grid-row: 2;
-        margin: 0;
-        max-width: 500px;
-        align-self: flex-start;
-        justify-self: start;
-        transform: translateY(-18rem) translateX(10rem); */
