@@ -6,8 +6,18 @@ document.addEventListener("DOMContentLoaded", () => {
         
             const valueNumber = box.getAttribute("data-value");
             const correspondingDescription = document.querySelector(`.FAQ-descriptions[data-value="${valueNumber}"]`);
-            box.classList.toggle('active');
-            correspondingDescription.classList.toggle('active');
+            const isCurrentlyActive = box.classList.contains("active");
+
+            FAQboxes.forEach( otherBox => {
+                const otherValueNumber = otherBox.getAttribute("data-value");
+                const otherDescription = document.querySelector(`.FAQ-descriptions[data-value="${otherValueNumber}"]`);
+                otherBox.classList.remove("active");
+                otherDescription.classList.remove("active");
+            });
+            if(!isCurrentlyActive) {
+                box.classList.add("active");
+                correspondingDescription.classList.add("active");
+            }
         });
     });
 });
